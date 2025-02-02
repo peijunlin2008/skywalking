@@ -46,7 +46,7 @@
 * Support `Get Effective TTL Configurations` API.
 * Fix `ServerStatusService.statusWatchers` concurrent modification.
 * Add protection for dynamic config change propagate chain.
-* Add Ruby component IDs.
+* Add Ruby component IDs(HttpClient=2, Redis=7, Memcached=20, Elasticsearch=47, Ruby=12000, Sinatra=12001).
 * Add component ID(160) for Caffeine.
 * Alarm: Support store and query the metrics snapshot when the alarm is triggered.
 * Alarm: Remove unused `Alarm Trend` query.
@@ -58,9 +58,15 @@
 * MQE: Support `top_n_of` function for merging multiple metrics topn query.
 * Support `labelAvg` function in the OAL engine.
 * Added `maxLabelCount` parameter in the `labelCount` function of OAL to limit the number of labels can be counted.
-* Adapt the new Browser API(`/browser/perfData/webVitals`, `/browser/perfData/resources`) protocol.
+* Adapt the new Browser API(`/browser/perfData/webVitals`, `/browser/perfData/webInteractions`, `/browser/perfData/resources`) protocol.
 * Add Circuit Breaking mechanism.
 * BanyanDB: Add support for compatibility checks based on the BanyanDB server's API version.
+* MQE: Support `&&(and)`, `||(or)` bool operators.
+* OAP self observability: Add JVM heap and direct memory used metrics.
+* OAP self observability: Add watermark circuit break/recover metrics.
+* Add Baseline module for support alarm module query baseline data.
+* BaseLine: Support query baseline metrics names.
+* Add `Get Node List in the Cluster` API.
 
 #### UI
 
@@ -84,6 +90,9 @@
 * Implement Async Profiling widget.
 * Fix inaccurate data query issue on endpoint topology page.
 * Update browser dashboard for the new metrics.
+* Visualize `Snapshot` on `Alerting` page.
+* OAP self observability dashboard: Add JVM heap and direct memory used metrics.
+* OAP self observability dashboard: Add watermark circuit break/recover metrics.
 
 #### Documentation
 * Update release document to adopt newly added revision-based process.
@@ -94,6 +103,7 @@
 * Add Status APIs docs.
 * Simplified the release process with removing maven central publish relative processes.
 * Add Circuit Breaking mechanism doc.
+* Add `Get Node List in the Cluster` API doc.
 
 
 All issues and pull requests are [here](https://github.com/apache/skywalking/milestone/224?closed=1)
